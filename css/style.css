@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: black;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 12%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.navbar a::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  bottom: -6px;
+  background: #fff;
+  border-radius: 5px;
+  opacity: 0; /* Ẩn gạch chân ban đầu */
+  transform: translateY(10px);
+}
+
+.navbar a:hover::after {
+  transform: translateY(0); /* Đưa gạch chân về đúng vị trí dưới chữ */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng mượt */
+  opacity: 1;
+}
+
+.search-form {
+  width: 250px;
+  height: 40px;
+  background: transparent;
+  border-radius: 6px;
+  border: solid 2px #fff;
+  display: flex;
+  align-items: center;
+}
+.search-form input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff;
+  font: 16px;
+  padding-left: 9px;
+}
+.search-form input::placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.search-form button {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.search-form button i {
+  color: #fff;
+  font-size: 20px;
+}
