@@ -138,6 +138,7 @@ body {
   width: calc(100% - 58%);
   height: 100%;
   /* background-color: #a73434; */
+  overflow: hidden;/* Ẩn phần thừa */
 }
 
 /* ===========================content=================================== */
@@ -175,32 +176,35 @@ body {
   align-items: center;
   backdrop-filter: blur(
     10px
-  ); /* Làm mờ nền phía sau (hỗ trợ trên các trình duyệt hiện đại) */
-  border-radius: 10px; /* Bo góc cho đẹp */
+  ); 
+  border-radius: 10px; 
   width: 100%;
   height: 100%;
   color: #fdeded;
 }
+
+
 /* =============================java-script======================= */
 .logreg-box .form-box.login {
   transform: translateX(0);
-  transition: transform 0.5s ease; /* Thêm hiệu ứng mượt */
+  transition: transform 0.5s ease; /* Thêm hiệu ứng mượt */ 
+  transition-delay: 0.5s; /* Đợi 0.7 giây trước khi chuyển đổi */
 }
 .logreg-box.active .form-box.login {
-  transform: translateX(430px);
+  transform: translateX(600px);
   transition-delay: 0s; /* Đợi 0 giây trước khi chuyển đổi */
 }
 
 .logreg-box .form-box.register {
-  transform: translateX(430px);
+  transform: translateX(600px);
   transition: transform 0.5s ease; /* Thêm hiệu ứng mượt */
 }
 
-.logreg-box.active.form-box.register {
+.logreg-box.active .form-box.register {
   transform: translateX(0);
-  transition-delay: 0.7s; /* Đợi 0.7 giây trước khi chuyển đổi */
+  transition-delay: 0.5s; /* Đợi 0.7 giây trước khi chuyển đổi */
 }
-
+/* =============================java-script======================= */
 .form-box h2 {
   font-size: 30px;
   text-align: center;
@@ -308,3 +312,6 @@ body {
 .login-register p a:hover {
   text-decoration: underline; /* Gạch chân khi hover */
 }
+/* ===========================media query=================================== */
+
+
