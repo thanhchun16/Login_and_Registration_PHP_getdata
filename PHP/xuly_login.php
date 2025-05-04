@@ -7,7 +7,7 @@ if (isset($_POST['submit-log'])) { // Kiểm tra xem form đã được submit c
 
     // Kiểm tra nếu các trường bị bỏ trống
     if (empty($email) || empty($password)) {
-        echo "Bạn không được để trống email hoặc mật khẩu!";
+        echo "<script>alert('Bạn không được để trống email hoặc mật khẩu!'); window.history.back();</script>";
     } else {
         $sql = "SELECT * FROM taikhoan WHERE email = '$email' AND password = '$password'"; // Truy vấn để kiểm tra tài khoản
         $result = mysqli_query($conn, $sql); // Thực hiện truy vấn
@@ -15,10 +15,9 @@ if (isset($_POST['submit-log'])) { // Kiểm tra xem form đã được submit c
             $row = mysqli_fetch_assoc($result); // Lấy thông tin tài khoản
             session_start(); // Bắt đầu phiên làm việc
             $_SESSION['username'] = $row['username']; // Lưu tên đăng nhập vào session
-            header("Location: ../Home.html"); // Chuyển hướng về trang chủ
-            exit();
+            echo "<script> window.location.href = '../Home.html';</script>";
         } else {
-            echo "Tài khoản hoặc mật khẩu không đúng!";
+            echo "<script>alert('Tài khoản hoặc mật khẩu không đúng!'); window.history.back();</script>";
         }
     }
 }
