@@ -9,3 +9,9 @@ loginLink.addEventListener("click", () => {
   logregBox.classList.remove("active");
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("showLogin") === "true") {
+    logregBox.classList.remove("active"); // Hiện form đăng nhập
+    // localStorage.removeItem("showLogin");
+  }
+});

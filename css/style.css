@@ -23,6 +23,7 @@ body {
   z-index: 100;
 }
 
+/* nav và hiệu ứng gạch chân */
 .navbar a {
   position: relative;
   font-size: 16px;
@@ -41,13 +42,13 @@ body {
   bottom: -6px;
   background: #fff;
   border-radius: 5px;
-  opacity: 0; /* Ẩn gạch chân ban đầu */
+  opacity: 0;
   transform: translateY(10px);
 }
 
 .navbar a:hover::after {
-  transform: translateY(0); /* Đưa gạch chân về đúng vị trí dưới chữ */
-  transition: transform 0.3s ease; /* Thêm hiệu ứng mượt */
+  transform: translateY(0);
+  transition: transform 0.3s ease;
   opacity: 1;
 }
 
@@ -138,7 +139,7 @@ body {
   width: calc(100% - 58%);
   height: 100%;
   /* background-color: #a73434; */
-  overflow: hidden;/* Ẩn phần thừa */
+  overflow: hidden; /* Ẩn phần thừa */
 }
 
 /* ===========================content=================================== */
@@ -174,20 +175,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(
-    10px
-  ); 
-  border-radius: 10px; 
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
   width: 100%;
   height: 100%;
   color: #fdeded;
 }
 
-
 /* =============================java-script======================= */
 .logreg-box .form-box.login {
   transform: translateX(0);
-  transition: transform 0.5s ease; /* Thêm hiệu ứng mượt */ 
+  transition: transform 0.5s ease; /* Thêm hiệu ứng mượt */
   transition-delay: 0.5s; /* Đợi 0.7 giây trước khi chuyển đổi */
 }
 .logreg-box.active .form-box.login {
@@ -312,6 +310,5 @@ body {
 .login-register p a:hover {
   text-decoration: underline; /* Gạch chân khi hover */
 }
+
 /* ===========================media query=================================== */
-
-
