@@ -13,7 +13,7 @@ if (isset($_POST['submit-reg'])) { // Kiểm tra xem form đã được submit c
             echo "<script>
         localStorage.setItem('showLogin', 'true');
         window.location.href = '../index.html';
-    </script>";
+        </script>";
             exit();
         } else {
             echo "Lỗi: {$sql}" . $sql . "<br>" . $conn->error;
